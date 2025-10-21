@@ -12,7 +12,7 @@ public class MathController {
     public String sequence(Integer numero){
         System.out.println();
         System.out.println(generatesequence(13));
-        String response = "{\"operation\": \"collatzsequence\",\"input\":" + numero  + "," +  "output:" + generatesequence(numero).toString() + "}";
+        String response = "{\"operation\": \"collatzsequence\",\"input\":" + numero  + "," +  "\"output\":" + "\""+generatesequence(numero).toString() +"\"" + "}";
         System.out.println(response);
 
         return response;
