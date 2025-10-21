@@ -16,12 +16,12 @@ public class ProxyController {
     public static String main(String numero) throws IOException {
         String geturl;
         if(count%2== 0) {
-            geturl = "http://localhost:8080/collatzsequence?" + numero;
-            System.out.println("se fue al primero"+ count);
+            geturl = "http://54.91.37.138:8080/collatzsequence?numero=" + numero;
+            System.out.println("se fue al primero " + geturl);
         }
         else{
-            geturl = "http://localhost:8080/collatzsequence?" + numero;
-            System.out.println("se fue al segundo"+ count);
+            geturl = "http://3.93.165.47:8080/collatzsequence?numero=" + numero;
+            System.out.println("se fue al segundo"+ geturl);
         }
         URL obj = new URL(geturl);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -49,6 +49,7 @@ public class ProxyController {
             return response.toString();
         } else {
                 System.out.println("GET request not worked");
+
                 return "GET request not worked";
             }
     }
